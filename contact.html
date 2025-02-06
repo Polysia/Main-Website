@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Polysiatech Pvt Ltd</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #0e0e0e; color: #fff; margin: 0; padding: 0; text-align: center; }
+        h1 { color: #00c3ff; margin-top: 100px; }
+        p { font-size: 1.2rem; }
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 15px 0; display: flex; justify-content: center; z-index: 1000; }
+        .navbar a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.1rem; font-weight: bold; transition: color 0.3s; }
+        .navbar a:hover { color: #00c3ff; }
+        .hero { background: url('cybersecurity-bg.jpg') no-repeat center center/cover; height: 50vh; display: flex; align-items: center; justify-content: center; }
+        .hero h1 { font-size: 3rem; background: rgba(0, 0, 0, 0.6); padding: 10px 20px; border-radius: 10px; }
+        .content { padding: 50px; max-width: 800px; margin: auto; }
+        p { font-size: 1.1rem; color: #fff; }
+
+        /* Layout for Video and Chatbot */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            align-items: center;
+        }
+
+        /* Video Styling */
+        iframe {
+            width: 60%;
+            height: 500px;
+            border: none;
+            object-fit: cover;
+        }
+
+        /* Chatbot Styling */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            z-index: 1001;
+            transition: all 0.3s ease-in-out;
+        }
+        .chat-header {
+            background: #00c3ff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .chat-content {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .chat-footer {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .chat-footer input {
+            width: 80%;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+        .chat-footer button {
+            width: 15%;
+            background: #00c3ff;
+            color: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .chat-footer button:hover {
+            background: #009bbd;
+        }
+
+        /* Floating Chatbot Icon */
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00c3ff;
+            color: #fff;
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+        .chatbot-icon:hover {
+            background-color: #009bbd;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <!-- <h1>Welcome to Polysiatech</h1> -->
+        <h1>Contact Us</h1>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        
+        <p>Email us at <a href="mailto:info@polysia.com" style="color: #00c3ff;">info@polysia.com</a></p>
+        <p>We are a cybersecurity company committed to providing innovative solutions to protect your digital assets. For more information, feel free to reach out!</p>
+    </div>
+
+    <!-- Container for Video and Chatbot -->
+    <div class="container">
+        <!-- YouTube Video Embed (Trimming the Video) -->
+        <iframe src="https://www.youtube.com/embed/G28e_kQk3kU?autoplay=1&loop=1&playlist=G28e_kQk3kU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        <!-- Chatbot Section -->
+        <div class="chatbot-container" id="chatbot">
+            <div class="chat-header" onclick="toggleChat()">Chat with Us</div>
+            <div class="chat-content" id="chatContent">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="userMessage" placeholder="Type a message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+
+    <script>
+        // Toggle chatbot visibility
+        function toggleChat() {
+            const chatbot = document.getElementById('chatbot');
+            if (chatbot.style.display === 'flex') {
+                chatbot.style.display = 'none'; // Hide chatbot
+            } else {
+                chatbot.style.display = 'flex'; // Show chatbot
+            }
+        }
+
+        // Predefined responses for common queries
+        const responses = {
+            "how can i contact you": "You can contact us via email at info@polysia.com.",
+            "what services do you offer": "We offer cybersecurity services including threat analysis, penetration testing, and network security solutions.",
+            "i have a query about cybersecurity": "Please email us your query at info@polysia.com, and we'll get back to you soon.",
+            "hello": "Hi! How can I assist you today?",
+            "bye": "Goodbye! Have a great day."
+        };
+
+        // Send message to the chat and display response
+        function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value.trim().toLowerCase();
+            if (userMessage === '') return;
+            
+            const chatContent = document.getElementById('chatContent');
+            
+            // Display user message
+            chatContent.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+            document.getElementById('userMessage').value = '';
+
+            // Check if the user message matches any predefined responses
+            let botMessage = responses[userMessage] || "Sorry, I didn't understand that. Can you rephrase?";
+
+            // Simulate bot response
+            setTimeout(() => {
+                chatContent.innerHTML += `<div><strong>Bot:</strong> ${botMessage}</div>`;
+                chatContent.scrollTop = chatContent.scrollHeight; // Scroll to the bottom
+            }, 1000);
+
+            chatContent.scrollTop = chatContent.scrollHeight; // Scroll to the bottom
+        }
+    </script>
+</body>
+</html>

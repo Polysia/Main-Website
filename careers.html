@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Polysiatech Pvt Ltd</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0e0e0e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            animation: slideDown 1s ease-in-out;
+        }
+        
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        
+        .navbar a:hover {
+            color: #00c3ff;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background: url('cybersecurity-bg.jpg') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #00c3ff;
+            z-index: 1;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .job-listing {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-listing:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 195, 255, 0.5);
+        }
+
+        .job-title {
+            font-size: 1.8rem;
+            color: #00c3ff;
+        }
+
+        .job-description {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .apply-button {
+            background: #00c3ff;
+            color: #0e0e0e;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .apply-button:hover {
+            background: #009acc;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { top: -50px; }
+            to { top: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="hero">
+        <h1>Join Our Team</h1>
+    </div>
+
+    <div class="content">
+        <p>We are looking for talented cybersecurity professionals to join our dynamic team. Explore the opportunities below and become a part of Polysiatech's journey to innovate and secure the digital world.</p>
+        
+        <div class="job-listing">
+            <h2 class="job-title">Cybersecurity Analyst</h2>
+            <p class="job-description">Monitor, detect, and respond to cybersecurity threats. Collaborate with a team of experts to safeguard our clients' data and infrastructure.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <h2 class="job-title">Penetration Tester</h2>
+            <p class="job-description">Conduct thorough security assessments and penetration tests to identify vulnerabilities. Provide actionable recommendations for improvement.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <h2 class="job-title">Security Software Developer</h2>
+            <p class="job-description">Design and develop cutting-edge security software solutions. Work closely with cross-functional teams to deliver robust and scalable applications.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <h2 class="job-title">Incident Response Specialist</h2>
+            <p class="job-description">Lead incident response efforts, analyze breaches, and develop strategies to prevent future occurrences. Be the first line of defense against cyber threats.</p>
+            <button class="apply-button">Apply Now</button>
+        </div>
+
+        <p>For more information or to apply for any of these positions, email us at <a href="mailto:operations@polysia.com" style="color: #00c3ff; text-decoration: none;">operations@polysia.com</a>.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polysiatech Pvt Ltd - Cybersecurity AI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0e0e0e;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling (same as previous structure) */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 100;
+            animation: slideDown 1s ease-in-out;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #00c3ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 2px;
+            animation: slideUp 2s ease-in-out;
+        }
+        p {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            animation: slideUp 2s ease-in-out 0.5s;
+        }
+
+        /* Animated Background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('cybersecurity-bg.jpg') no-repeat center center/cover;
+            filter: blur(10px);
+            animation: zoomIn 10s infinite;
+        }
+
+        /* Hover Effects and Animations for Navbar */
+        @keyframes slideDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Fade In */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Slide Up (for heading and paragraph) */
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Zoom in effect for background */
+        @keyframes zoomIn {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Scrolling Parallax Effect */
+        .parallax {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            position: relative;
+            height: 100vh;
+            z-index: -1;
+            animation: parallaxEffect 5s ease-in-out infinite;
+        }
+
+        .parallax img {
+            width: 48%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Parallax effect */
+        @keyframes parallaxEffect {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Additional Content Section */
+        .content-section {
+            padding: 50px 20px;
+            background: #1a1a1a;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .content-section p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Polysiatech Pvt Ltd</h1>
+        <p>Empowering Cybersecurity with AI</p>
+    </div>
+
+    <!-- Parallax Effect Section -->
+   <!-- Parallax Effect Section -->
+<!-- Parallax Effect Section -->
+<!-- Parallax Effect Section -->
+<div class="parallax" style="display: flex; justify-content: center; align-items: center; gap: 2%; padding: 20px;">
+    <div style="width: 500px; height: 250px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.q3UJpmdStGWRG_M8ZtmzBQHaEo&pid=Api" alt="Cybersecurity Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div style="width: 500px; height: 250px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.UJ9DO3OvZaIU8bUzCSRXCwHaH0&pid=Api" alt="Cybersecurity Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+</div>
+
+
+
+    <!-- Additional Content Section -->
+    <div class="content-section">
+        <h2>Our Services</h2>
+        <p>Providing the best cybersecurity solutions for your business with cutting-edge AI technology. We offer comprehensive protection to secure your data, networks, and digital assets from evolving cyber threats.</p>
+    </div>
+
+    <script>
+        // Animate navbar on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.animation = 'slideDown 1s ease-in-out';
+        });
+
+        // Optional: Trigger animations on scroll
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            const scrollPosition = window.scrollY;
+
+            // Parallax effect for the background image
+            hero.style.backgroundPositionY = (scrollPosition * 0.5) + "px";
+        });
+    </script>
+</body>
+</html>

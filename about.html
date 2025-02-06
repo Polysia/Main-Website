@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Polysiatech Pvt Ltd</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0e0e0e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            animation: navbarAnim 1.5s ease-out;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1rem;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #00c3ff;
+        }
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #00c3ff;
+            left: 50%;
+            bottom: 0;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        .navbar a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .about-section {
+            padding: 120px 20px 60px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00c3ff;
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+        p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+            margin: 10px 0;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+        .company-history {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px 20px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeInUp 2.5s ease-out forwards;
+        }
+        .company-history h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00c3ff;
+        }
+        .company-history p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .values {
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 2.5s ease-out forwards;
+        }
+        .values h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00c3ff;
+        }
+        .values ul {
+            list-style: none;
+            padding: 0;
+        }
+        .values li {
+            font-size: 1.3rem;
+            margin: 15px 0;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 2.5s ease-out forwards;
+        }
+        .team-section {
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 2.5s ease-out forwards;
+        }
+        .team-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00c3ff;
+            text-align: center;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            animation: fadeInUp 3s ease-out forwards;
+        }
+        .team-member {
+            background: #111;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            animation: fadeInUp 2s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+        .team-member h3 {
+            font-size: 1.5rem;
+            color: #00c3ff;
+            margin: 10px 0;
+        }
+        .team-member p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+            animation: fadeInUp 3s ease-out forwards;
+        }
+        @keyframes navbarAnim {
+            0% {
+                top: -50px;
+                opacity: 0;
+            }
+            100% {
+                top: 0;
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        @media (max-width: 768px) {
+            h1, .values h2 {
+                font-size: 2rem;
+            }
+            p, .values li {
+                font-size: 1rem;
+            }
+            .navbar a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="about-section">
+        <h1>About Polysiatech</h1>
+        <p>Polysiatech Pvt Ltd is a cutting-edge cybersecurity and AI company dedicated to building advanced security solutions. Our mission is to empower businesses with AI-driven protection against cyber threats in a rapidly evolving digital world.</p>
+        <p>With a team of experts, we innovate in AI-driven cybersecurity, ensuring safety in an ever-evolving digital world. We believe that the future of cybersecurity lies in the fusion of artificial intelligence, machine learning, and robust security frameworks.</p>
+    </div>
+
+    <div class="company-history">
+        <h2>Our Journey</h2>
+        <p>Founded in 2020, Polysiatech Pvt Ltd emerged from the vision of a group of cybersecurity enthusiasts passionate about revolutionizing digital security. With our base in India, we quickly expanded our footprint, helping global businesses stay secure in a rapidly changing technological landscape.</p>
+        <p>Our early innovations focused on developing AI-driven solutions that could predict, detect, and neutralize cyber threats in real time. As cyber threats grew more complex, so did our approach—blending cutting-edge technology with expert knowledge in cybersecurity to develop solutions tailored for organizations of all sizes.</p>
+        <p>Today, Polysiatech stands as a trusted partner for businesses worldwide, empowering them to safeguard their digital infrastructure while embracing the future of AI-driven security.</p>
+    </div>
+
+    <div class="values">
+        <h2>Our Core Values</h2>
+        <ul>
+            <li><strong>Innovation:</strong> We pioneer new solutions to stay ahead of evolving threats.</li>
+            <li><strong>Integrity:</strong> Transparency and trust are at the heart of our security solutions.</li>
+            <li><strong>Security:</strong> Our primary focus is protecting organizations from the ever-growing number of cyber threats.</li>
+            <li><strong>Excellence:</strong> We strive for the highest standards in every project we undertake.</li>
+            <li><strong>Collaboration:</strong> We believe in the power of teamwork, both within our company and with our clients, to ensure mutual success.</li>
+        </ul>
+    </div>
+
+    
+
+    <footer>
+        &copy; 2024 Polysiatech Pvt Ltd. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Polysiatech Pvt Ltd</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0e0e0e;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #00c3ff;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 2px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 30px;
+            border-radius: 15px;
+        }
+
+        .content {
+            padding: 100px 20px 50px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #00c3ff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .blog-post {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background: #0f2027;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="careers.html">Careers</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="hero">
+        <h1>Latest Insights</h1>
+        <p>Stay updated with the latest trends in cybersecurity and AI.</p>
+    </div>
+
+    <div class="content">
+        <div class="blog-post">
+            <h2>The Future of Cybersecurity in a Digital World</h2>
+            <p>As the digital landscape evolves, so do the threats that come with it. Cybersecurity professionals are constantly adapting to new challenges, from ransomware attacks to sophisticated phishing schemes. Staying ahead requires not just reactive measures, but proactive strategies and continuous learning.</p>
+        </div>
+        
+        <div class="blog-post">
+            <h2>Artificial Intelligence: Friend or Foe?</h2>
+            <p>AI has become a double-edged sword in cybersecurity. While it offers tools for better threat detection and response, it also provides hackers with new ways to breach systems. Understanding AI's role in both offense and defense is crucial for any cybersecurity strategy.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2>Top 5 Cybersecurity Practices Every Business Should Follow</h2>
+            <p>From implementing multi-factor authentication to regular security audits, there are essential practices every business must adopt to safeguard their data. This article explores these practices and explains why they're critical in today's cyber environment.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2>The Rise of Quantum Computing and Its Impact on Encryption</h2>
+            <p>Quantum computing promises unprecedented processing power, but it also threatens current encryption standards. This post delves into what quantum computing means for cybersecurity and how industries can prepare for the shift.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2>How to Build a Career in Cybersecurity</h2>
+            <p>Cybersecurity is one of the fastest-growing fields, offering numerous opportunities for those with the right skills and certifications. Learn about the paths you can take, from ethical hacking to risk management, and how to get started.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2>Understanding Zero Trust Security Models</h2>
+            <p>Zero Trust isn't just a buzzword—it's a crucial framework for modern cybersecurity. By verifying every access request, organizations can significantly reduce the risk of breaches. Explore how to implement Zero Trust in your network.</p>
+        </div>
+
+        <div class="blog-post">
+            <h2>Why Regular Security Training is Essential for Employees</h2>
+            <p>Human error is one of the biggest vulnerabilities in cybersecurity. Regular training helps employees recognize threats and respond appropriately, creating a more secure organizational environment.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Polysiatech Pvt Ltd. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
